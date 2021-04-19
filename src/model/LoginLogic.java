@@ -2,10 +2,10 @@ package model;
 
 public class LoginLogic {
 	public boolean execute(User user) {
-		if(user.getPass().equals("1234")) {
-			return true;
+		if(user.getPass() == null && user.getPass().length() == 0) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 }
